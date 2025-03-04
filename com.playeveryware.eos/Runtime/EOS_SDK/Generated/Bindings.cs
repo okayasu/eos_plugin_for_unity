@@ -2141,7 +2141,7 @@ namespace Epic.OnlineServices
 			if (functionPointer == System.IntPtr.Zero) throw new DynamicBindingException(EOS_AntiCheatClient_RemoveNotifyPeerAuthStatusChangedName);
 			EOS_AntiCheatClient_RemoveNotifyPeerAuthStatusChanged = (EOS_AntiCheatClient_RemoveNotifyPeerAuthStatusChangedDelegate)Marshal.GetDelegateForFunctionPointer(functionPointer, typeof(EOS_AntiCheatClient_RemoveNotifyPeerAuthStatusChangedDelegate));
 
-#if !UNITY_STANDALONE_WIN
+#if UNITY_STANDALONE_WIN
 			functionPointer = getFunctionPointer(libraryHandle, EOS_AntiCheatClient_Reserved01Name);
 			if (functionPointer == System.IntPtr.Zero) throw new DynamicBindingException(EOS_AntiCheatClient_Reserved01Name);
 			EOS_AntiCheatClient_Reserved01 = (EOS_AntiCheatClient_Reserved01Delegate)Marshal.GetDelegateForFunctionPointer(functionPointer, typeof(EOS_AntiCheatClient_Reserved01Delegate));
